@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <div class="header">
+    <div class="center">
+      <svg>
+        <text x="50%" y="75%" text-anchor="middle">
+          MUHAIS’S PLAYLIST 
+        </text>
+      </svg>
+    </div>
+  </div>
+  <div class="form">
+    <p>Add a new song:</p>
+    <div class="inputs">
+      <input placeholder="Image URL" class="image" value="" />
+      <input placeholder="Song Name" class="song-name" value="" />
+      <input placeholder="Artist" class="artist" value="" />
+      <input placeholder="Youtube Song Link URL" class="song-link" value="" />
+    </div>
+    <br>
+    <div class = "ok">
+    <input type="file" id="image-upload" class="image-upload" accept="image/*">
+    </div>
+    <label for="image-upload" class="upload-btn">Upload Image</label>
+
+    <button class="add">Add</button>
+  </div>
+
+
+  <div class="heading">
+    <h4>Image</h4>
+    <h4>Song</h4>
+    <h4>Artist</h4>
+    <h4>Youtube Song Link</h4>
+  </div>
+
+
+  <div class="display">
+    <div class="column display-image">
+      <!-- Initial song images -->
+      <p><img src="barneyimg.jpeg"></p>
+      <p><img src="bobimg.jpeg"></p>
+      <p><img src="ninjaimg.jpeg"></p>
+      <p><img src="oppimg.jpeg"></p>
+      
+      <!-- Include more initial songs here if needed -->
+    </div>
+    
+    <div class="column display-song">
+      <!-- Initial song names -->
+      <p>I love you</p>
+      <p>Can We Fix It?</p>
+      <p>The Weekend Whip</p>
+      <p> Can You Hear The Music</p>
+      <!-- Include more initial songs here if needed -->
+    </div>
+    
+    <div class="column display-artist">
+      <!-- Initial artists -->
+      <p>Barney</p>
+      <p>ABC kids</p>
+      <p>Ninjago Music and The Fold</p>
+      <p>Ludwig Göransson</p>
+      <!-- Include more initial songs here if needed -->
+    </div>
+    
+    <div class="column display-link">
+      <!-- Initial song links -->
+      <p>
+        <iframe width="300" height="100" src="https://www.youtube.com/embed/LK3C9IytrLI?si=jox-h7imS_AgD7kY&amp;start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </p>
+      <p>
+        <iframe width="300" height="100" src="https://www.youtube.com/embed/HdVg-2jn2OU?si=_Tpjeuv94qrb2ezn&amp;start=6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </p>
+      <p>
+        <iframe width="300" height="100" src="https://www.youtube.com/embed/Il7y6VwDrrw?si=JTHbH0iVo229ilCP&amp;start=61" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </p>
+
+      <p>
+        <iframe width="300" height="100" src="https://www.youtube.com/embed/4JZ-o3iAJv4?si=vu9dqt9YbgoLN6z9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </p>
+      <!-- Include more initial songs here if needed -->
+    </div>
+    
+
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
