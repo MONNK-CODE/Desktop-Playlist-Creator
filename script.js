@@ -81,7 +81,13 @@ function displaySongInfo(newSong) {
 
 
 
+let uploadButton = document.getElementById("uploadButton");
 let imageUploadInput = document.querySelector(".image-upload");
+
+// Trigger click event on file input when button is clicked
+uploadButton.addEventListener("click", function() {
+  imageUploadInput.click();
+});
 
 // Listen for change events on the file input
 imageUploadInput.addEventListener("change", handleImageUpload);
@@ -103,7 +109,6 @@ function handleImageUpload(event) {
     reader.readAsDataURL(file);
   }
 }
-
 
 // click event to add songs
 add.onclick = addSongInfo;

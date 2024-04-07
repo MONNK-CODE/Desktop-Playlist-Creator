@@ -131,38 +131,140 @@ svg text {
     stroke-width: 0;
   }
 }
+/* MOVING TEXT ANIMATION END*/
 
-.upload-btn {
+/* .upload-btn {
   display: inline-block;
   padding: 6px 12px;
   cursor: pointer;
   background-color: #007bff;
   color: #fff;
-  border: none; /* Removing border */
+  border: none; 
   border-radius: 4px;
-  margin-top: 10px; /* Adding margin for spacing */
+  margin-top: 10px; 
 }
 
 
 .upload-btn:hover {
-  background-color: #0056b3; /* Changing background color on hover */
-}
+  background-color: #0056b3; 
+} */
 
 .ok {
-  display: none;
+margin-top: 10px;
 }
 
-.add {
+
+/* .add {
   display: inline-block;
   padding: 6px 12px;
   cursor: pointer;
   background-color: #007bff;
   color: #fff;
-  border: none; /* Removing border */
+  border: none; 
   border-radius: 4px;
-  margin-top: 10px; /* Adding margin for spacing */
+  margin-top: 10px; 
 }
 
 .add:hover {
-  background-color: #0056b3; /* Changing background color on hover */
+  background-color: #0056b3; 
+} */
+
+
+/* ADD BUTTON */
+.add {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  padding: 6px 12px;
+  gap: 4px;
+  height: 32px;
+  width: 81px;
+  border: none;
+  background: #1b1b1cd0;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.6s ease; 
+}
+
+.lable {
+  line-height: 22px;
+  font-size: 17px;
+  color: #ffff;
+  letter-spacing: 1px;
+}
+
+.add:hover {
+  background: #488aec;
+}
+
+
+.add:hover .svg-icon {
+  animation: rotate 1.3s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* ADD BUTTON END */
+
+button#uploadButton {
+  border: none;
+  display: flex;
+  padding: 0.75rem 1.5rem;
+  background-color: #488aec;
+  color: #ffffff;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 0.5rem;
+  user-select: none;
+  gap: 0.75rem;
+  box-shadow: 0 4px 6px -1px #488aec31, 0 2px 4px -1px #488aec17;
+  transition: all .3s ease; /* Added transition for smooth animation */
+  cursor: pointer; /* Add pointer cursor to indicate clickable */
+}
+
+button#uploadButton:hover {
+  box-shadow: 0 12px 20px -4px #488aec4f, 0 8px 12px -6px #488aec17; /* Adjusted shadow on hover */
+  transform: translateY(-2px); /* Added slight upward movement on hover */
+  background-color: #1b1b1cd0;
+}
+
+button#uploadButton:focus, button#uploadButton:active {
+  opacity: .85;
+  box-shadow: none;
+}
+
+button#uploadButton svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.ok1{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.875rem;
+  flex-direction: row; 
 }
