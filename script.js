@@ -1,115 +1,108 @@
+document.addEventListener('DOMContentLoaded', function() {
+    let imageInput = document.querySelector(".image");
+    let songNameInput = document.querySelector(".song-name");
+    let artistInput = document.querySelector(".artist");
+    let songLinkInput = document.querySelector(".song-link");
+    let uploadButton = document.getElementById('uploadButton');
+    let imageUpload = document.getElementById('imageUpload');
+    let add = document.querySelector(".add");
+    let displayImage = document.querySelector(".display-image");
+    let displaySong = document.querySelector(".display-song");
+    let displayArtist = document.querySelector(".display-artist");
+    let displayLink = document.querySelector(".display-link");
+    let uploadedImageUrl = ''; // Variable to store the uploaded image URL or base64 string
+
+    // Function to trigger the file input when the upload button is clicked
+    uploadButton.addEventListener('click', function() {
+        imageUpload.click();
+    });
+
+    // Function to handle the file input change event
+  imageUpload.addEventListener('change', function() {
+      if (this.files && this.files[0]) {
+          const file = this.files[0];
+          const objectURL = URL.createObjectURL(file);
+
+          // Display the image preview using the object URL
+          imageInput.value = objectURL; // You might want to use a different method to display this URL or the image itself
+
+          // Optionally, display the image in an <img> tag for preview
+          const imagePreview = document.getElementById('imagePreview'); // Make sure you have this <img> element in your HTML
+          imagePreview.src = objectURL;
+          // imagePreview.style.display = 'block';
+
+          // Store the object URL if you need to use it later, but consider privacy and memory cleanup
+          uploadedImageUrl = objectURL; // Be mindful about when to revoke these URLs to free memory
+      }
+  });
 
 
-// input variables
-let imageInput = document.querySelector(".image");
-let songNameInput = document.querySelector(".song-name");
-let artistInput = document.querySelector(".artist");
-let songLinkInput = document.querySelector(".song-link");
 
-// button variable
-let add = document.querySelector(".add");
+    // Function to add the song information along with the uploaded image
+  function addSongInfo() {
+      // Retrieve input values
+      let imageUrl = imageInput.value; // Assuming this is the base64 string or object URL from the file input
+      let song = songNameInput.value;
+      let artist = artistInput.value;
+      let link = songLinkInput.value;
 
+      // Validate inputs
+      if (!imageUrl || !song || !artist || !link) {
+          alert("Please fill in all fields before adding a song.");
+          return; // Exit the function to prevent adding an incomplete song
+      }
 
+      // Checks if the link is a YouTube link and converts it to an embed link
+      if (isYouTubeLink(link)) {
+          link = convertToEmbed(link);
+      }
 
-// these are display variables
-let display = document.querySelector(".display");
-let displaySong = document.querySelector(".display-song");
-let displayArtist = document.querySelector(".display-artist");
-let displayImage = document.querySelector(".display-image");
-let displayLink = document.querySelector(".display-link");
+      // Proceed to create the song object and display it
+      let newSong = {
+          imageUrl: imageUrl,
+          song: song,
+          artist: artist,
+          link: link
+      };
 
+      // Clear input fields after adding the song
+      clearInputs();
 
-
-// this is a function to add the song information
-function addSongInfo() {
-
-  // this declares the variables to save the users input
-  let imageUrl = imageInput.value;
-  let song = songNameInput.value;
-  let artist = artistInput.value;
-  let link = songLinkInput.value;
-
-  // this checks if the link is a YouTube link and displays it 
-  if (isYouTubeLink(link)) {
-    link = convertToEmbed(link);
+      // Add song to the display
+      displaySongInfo(newSong);
   }
 
-  // this creates an object for the new songs
-  let newSong = {
-    imageUrl: imageUrl,
-    song: song,
-    artist: artist,
-    link: link
-  };
-
-  // this clears input fields after you add something so it basically rests the input fields after add is clicked 
-  //if you look at the last line on the add.onclick = addSongInfo;its basically performing the function addSongInfo
-  imageInput.value = "";
-  songNameInput.value = "";
-  artistInput.value = "";
-  songLinkInput.value = "";
-
-
-  displaySongInfo(newSong);
-}
-
-// this function checks if the link is a YouTube link
-function isYouTubeLink(link) {
-  return link.includes("youtube.com") || link.includes("youtu.be");
-}
-
-// this function converts YouTube link to an embedded iframe
-function convertToEmbed(link) {
-  let videoId = link.match(/(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
-  if (videoId) {
-    return `https://www.youtube.com/embed/${videoId[1]}`;
+  function clearInputs() {
+      imageInput.value = "";
+      songNameInput.value = "";
+      artistInput.value = "";
+      songLinkInput.value = "";
+      // Ensure you clear the uploadedImageUrl if you're using it
+      uploadedImageUrl = ''; // Clear if using object URLs or base64 strings
   }
-  return link; // so this returns the link if it's is not a YouTube link
-}
 
-// this function displays the stored songs
-function displaySongInfo(newSong) {
-  // display image
-  displayImage.innerHTML += `<p><img src="${newSong.imageUrl}"></p>`;
-  // display song name
-  displaySong.innerHTML += `<p>${newSong.song}</p>`;
-  // display artist
-  displayArtist.innerHTML += `<p>${newSong.artist}</p>`;
-  // this displays song link in the correct size
-  displayLink.innerHTML += `<p><iframe width="300" height="100" src="${newSong.link}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>`;
-}
-
-
-
-let uploadButton = document.getElementById("uploadButton");
-let imageUploadInput = document.querySelector(".image-upload");
-
-// Trigger click event on file input when button is clicked
-uploadButton.addEventListener("click", function() {
-  imageUploadInput.click();
-});
-
-// Listen for change events on the file input
-imageUploadInput.addEventListener("change", handleImageUpload);
-
-function handleImageUpload(event) {
-  // Get the selected file
-  let file = event.target.files[0];
-
-  if (file) {
-    // Read the file as a data URL
-    let reader = new FileReader();
-
-    reader.onload = function(event) {
-      // Set the data URL as the source for the image input
-      imageInput.value = event.target.result;
+    // Function to check if the link is a YouTube link
+    function isYouTubeLink(link) {
+        return link.includes("youtube.com") || link.includes("youtu.be");
     }
 
-    // Read the file
-    reader.readAsDataURL(file);
-  }
-}
+    // Function to convert a YouTube link to an embeddable URL
+    function convertToEmbed(link) {
+        let videoId = link.match(/(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+        if (videoId) {
+            return `https://www.youtube.com/embed/${videoId[1]}`;
+        }
+        return link; // Return the original link if it's not a YouTube link
+    }
 
-// click event to add songs
-add.onclick = addSongInfo;
+    // Function to display the song information in the playlist
+      function displaySongInfo(newSong) {
+      displayImage.innerHTML += `<p><img src="${newSong.imageUrl}" alt="Song Image"></p>`;
+        displaySong.innerHTML += `<p>${newSong.song}</p>`;
+        displayArtist.innerHTML += `<p>${newSong.artist}</p>`;
+        displayLink.innerHTML += `<p><iframe width="300" height="100" src="${newSong.link}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>`;
+    }
 
+    // Event listener to add songs when the add button is clicked
+    add.addEventListener('click', addSongInfo);
+});

@@ -133,21 +133,6 @@ svg text {
 }
 /* MOVING TEXT ANIMATION END*/
 
-/* .upload-btn {
-  display: inline-block;
-  padding: 6px 12px;
-  cursor: pointer;
-  background-color: #007bff;
-  color: #fff;
-  border: none; 
-  border-radius: 4px;
-  margin-top: 10px; 
-}
-
-
-.upload-btn:hover {
-  background-color: #0056b3; 
-} */
 
 .ok {
 margin-top: 10px;
@@ -231,8 +216,8 @@ button#uploadButton {
   padding: 0.75rem 1.5rem;
   background-color: #488aec;
   color: #ffffff;
-  font-size: 0.75rem;
-  line-height: 1rem;
+  font-size: 1.2 rem;
+  line-height: 1 rem;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;

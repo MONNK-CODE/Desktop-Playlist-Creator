@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>MUSIC PLAYLIST</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
   <link href="style.css" rel="stylesheet" type="text/css" />
@@ -31,16 +31,23 @@
     </div>
     <br>
     
-    <div class="ok1">
-      
-    <button id="uploadButton">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 3H12H8C6.34315 3 5 4.34315 5 6V18C5 19.6569 6.34315 21 8 21H11M13.5 3L19 8.625M13.5 3V7.625C13.5 8.17728 13.9477 8.625 14.5 8.625H19M19 8.625V11.8125" stroke="#fffffff" stroke-width="2"></path>
-        <path d="M17 15V18M17 21V18M17 18H14M17 18H20" stroke="#fffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-      </svg>
-      ADD FILE 
-    </button>
-<input type="file" class="image-upload" style="display: none;">
+      <div class="ok1">
+        <button id="uploadButton">
+          UPLOAD IMAGE
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 3H12H8C6.34315 3 5 4.34315 5 6V18C5 19.6569 6.34315 21 8 21H11M13.5 3L19 8.625M13.5 3V7.625C13.5 8.17728 13.9477 8.625 14.5 8.625H19M19 8.625V11.8125"></path>
+            <path d="M17 15V18M17 21V18M17 18H14M17 18H20" stroke="#fffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+        <!-- After the file input -->
+        <div id="imagePreviewContainer" style="margin-top: 20px;">
+          <img id="imagePreview" src="#" alt="Image preview" style="display: none; max-width: 300px; max-height: 100px;">
+        </div>
+        
+
+
+
 
 
     
@@ -50,6 +57,7 @@
     </button>
 
     </div>
+  
     <div class = "ok" </div>  
 
 
