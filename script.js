@@ -105,4 +105,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Event listener to add songs when the add button is clicked
     add.addEventListener('click', addSongInfo);
+
+
+
+  const introArrow = document.querySelector('#intro i');
+  const playlist = document.querySelector('.playlist');
+
+  introArrow.addEventListener('click', function() {
+      playlist.scrollIntoView({ behavior: 'smooth' });
+    });
+  
 });
