@@ -114,5 +114,5 @@ document.addEventListener('DOMContentLoaded', function() {
   introArrow.addEventListener('click', function() {
       playlist.scrollIntoView({ behavior: 'smooth' });
     });
-  
+
 });
