@@ -1,23 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun&display=swap");
 
-html, body {
+body {
   height: 100%;
   width: 100%;
   font-family: "Reem Kufi Fun" ;
 }
 
-/* body {
-  padding: 20px;
-  color: white;
-  background-color: #9ac3db;
-} */
-
 .playlist{
   width: 100%;
   height : 110vh;
   color: white;
-  /* background-color: #9ac3db; */
-  background: linear-gradient(90deg, rgba(154,195,219,1) 0%, rgba(9,45,121,1) 100%);
+ background: linear-gradient(90deg, rgba(154,195,219,1) 0%, rgba(9,45,121,1) 100%); 
 }
 
 
@@ -39,7 +32,7 @@ h1 {
   border-top: 5px solid black;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 769px) {
   .column {
     width: 100%;
   }
@@ -50,21 +43,21 @@ h1 {
   display: block;
   height: 100px;
   width: 200px;
+  margin-bottom : 20px;
   justify-content: space-around;
 
 }
 
 .display-song p {
-  font-size: 18px;
-  height: 100px;
+  font-size: 30px;
+  height: 130px;
   font-weight: bold;
   justify-content: space-around;
-
 }
 
 .display-artist p {
-  font-size: 18px;
-  height: 100px;
+  font-size: 30px;
+  height: 130px;
    font-weight: bold;
   justify-content: space-around;
 
@@ -73,8 +66,8 @@ h1 {
 
 .display-link a {
   display: block;
-  font-size: 18px;
-  height: 100px;
+  font-size: 30px;
+  height: 130px;
   font-weight: bold;
   justify-content: space-around;
 
@@ -83,7 +76,7 @@ h1 {
 .form {
   width: 75%;
   margin: 0 auto 20px auto;
-  font-size: 18px;
+  font-size: 50px;
 }
 
 input {
@@ -130,7 +123,7 @@ svg text {
     stroke-width: 3; 
   }
   100% {
-    fill: rgba(255, 255, 255, 1); /*WHITE*/
+    fill: rgba(255, 255, 255, 1); 
     stroke: rgba(17, 7, 38, 0);
     stroke-dashoffset: -25%; 
     stroke-dasharray: 50% 0; 
@@ -219,13 +212,13 @@ button#uploadButton {
   user-select: none;
   gap: 0.75rem;
   box-shadow: 0 4px 6px -1px #488aec31, 0 2px 4px -1px #488aec17;
-  transition: all .3s ease; /* Added transition for smooth animation */
-  cursor: pointer; /* Add pointer cursor to indicate clickable */
+  transition: all .3s ease; 
+  cursor: pointer;
 }
 
 button#uploadButton:hover {
   box-shadow: 0 12px 20px -4px #488aec4f, 0 8px 12px -6px #488aec17; /* Adjusted shadow on hover */
-  transform: translateY(-2px); /* Added slight upward movement on hover */
+  transform: translateY(-2px); 
   background-color: #1b1b1cd0;
 }
 
@@ -250,24 +243,23 @@ button#uploadButton svg {
 
 .container {
   width: 100%;
-  height : 100vh;
+  height : 100%;
 }
 
 #intro {
   width: 100%;
   height: 100vh;
   display: flex;
-  flex-direction: column;  /* Align children vertically */
-  align-items: center;  /* Center items horizontally */
-  justify-content: center;  /* Center items vertically */
-  gap: 20px;  /* Space between the heading and the arrow */
+  flex-direction: column;  
+  align-items: center; 
+  justify-content: center; 
+  gap: 20px;  
   color: white;
-/* background: linear-gradient(90deg, rgba(154,195,219,1) 0%, rgba(9,45,121,1) 100%); */
-   background-color: #9ac3db; 
+background-color: #9ac3db;  
 }
 #intro i{
   cursor: pointer;
-  font-size: 3rem;
+  font-size: 8rem;
    margin-right: 5px;
     display: flex; 
    justify-content: center;
@@ -294,4 +286,7 @@ button#uploadButton svg {
   60% {
     transform: translateY(-15px);
   }
+}
+p{
+  font-size : 50px;
 }
