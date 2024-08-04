@@ -1,4 +1,4 @@
-# Music Playlist Creator
+# Music Playlist Creator for Desktop
 
 ## Overview
 
