@@ -100,15 +100,14 @@ document.addEventListener('DOMContentLoaded', function() {
       displayImage.innerHTML += `<p><img src="${newSong.imageUrl}" alt="Song Image"></p>`;
         displaySong.innerHTML += `<p>${newSong.song}</p>`;
         displayArtist.innerHTML += `<p>${newSong.artist}</p>`;
-        displayLink.innerHTML += `<p><iframe width="300" height="100" src="${newSong.link}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>`;
+        displayLink.innerHTML += `<p><iframe width="300" height="100" src="${newSong.link}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>`;
     }
 
     // Event listener to add songs when the add button is clicked
     add.addEventListener('click', addSongInfo);
 
 
-
-  const introArrow = document.querySelector('#intro i');
+    const introArrow = document.querySelector('#intro i');
   const playlist = document.querySelector('.playlist');
 
   introArrow.addEventListener('click', function() {

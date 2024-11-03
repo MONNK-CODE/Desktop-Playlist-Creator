@@ -1,32 +1,31 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>MUSIC PLAYLIST</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
   <link href="style.css" rel="stylesheet" type="text/css" />
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  
-  <div class="container">
-    <div id="intro">
-      <h1>Playlist Creator</h1>
-      <div>
-        <i class="fas fa-arrow-down bounce"></i>
-      </div>
+
+<div class="container">
+  <div id="intro">
+    <h1>Playlist Creator</h1>
+    <div>
+      <i class="fas fa-arrow-down bounce"></i>
     </div>
-      </div>
-  
-  <div class = "playlist">
+  </div>
+</div>
+
+<div class="playlist">
   <div class="header">
     <div class="center">
       <svg>
         <text x="50%" y="75%" text-anchor="middle">
-          MUHAIS’S PLAYLIST 
+          MUHAIS’ PLAYLIST
         </text>
       </svg>
     </div>
@@ -34,103 +33,81 @@
   <div class="form">
     <p>Add a new song:</p>
     <div class="inputs">
-      <input placeholder="Image URL" class="image" value="" />
-      <input placeholder="Song Name" class="song-name" value="" />
-      <input placeholder="Artist" class="artist" value="" />
-      <input placeholder="Youtube Song Link URL" class="song-link" value="" />
+      <label for="image-url">Image URL:</label>
+      <input id="image-url" placeholder="Image URL" class="image" value="" />
+
+      <label for="song-name">Song Name:</label>
+      <input id="song-name" placeholder="Song Name" class="song-name" value="" />
+
+      <label for="artist">Artist:</label>
+      <input id="artist" placeholder="Artist" class="artist" value="" />
+
+      <label for="song-link">YouTube Song Link URL:</label>
+      <input id="song-link" placeholder="YouTube Song Link URL" class="song-link" value="" />
     </div>
     <br>
-    
-      <div class="ok1">
-        <button id="uploadButton">
-          UPLOAD IMAGE
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 3H12H8C6.34315 3 5 4.34315 5 6V18C5 19.6569 6.34315 21 8 21H11M13.5 3L19 8.625M13.5 3V7.625C13.5 8.17728 13.9477 8.625 14.5 8.625H19M19 8.625V11.8125"></path>
-            <path d="M17 15V18M17 21V18M17 18H14M17 18H20" stroke="#fffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </button>
-        <input type="file" id="imageUpload" accept="image/*" style="display: none;">
-        <!-- After the file input -->
-        <div id="imagePreviewContainer" style="margin-top: 20px;">
-          <img id="imagePreview" src="#" alt="Image preview" style="display: none; max-width: 300px; max-height: 100px;">
-        </div>
-        
 
+    <div class="ok1">
+      <button id="uploadButton">
+        UPLOAD IMAGE
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 3H12H8C6.34315 3 5 4.34315 5 6V18C5 19.6569 6.34315 21 8 21H11M13.5 3L19 8.625M13.5 3V7.625C13.5 8.17728 13.9477 8.625 14.5 8.625H19M19 8.625V11.8125"></path>
+          <path d="M17 15V18M17 21V18M17 18H14M17 18H20" stroke="#fffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+      <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+      <div id="imagePreviewContainer" style="margin-top: 20px;">
+        <img id="imagePreview" src="#" alt="Image preview" style="display: none; max-width: 300px; max-height: 100px;">
+      </div>
 
-
-
-
-    
-    <button class="add">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" height="20" fill="none" class="svg-icon"><g stroke-width="1.5" stroke-linecap="round" stroke="#fff"><circle r="7.5" cy="10" cx="10"></circle><path d="m9.99998 7.5v5"></path><path d="m7.5 9.99998h5"></path></g></svg>
-      <span class="label">Add</span>
-    </button>
-
+      <button class="add">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" height="20" fill="none" class="svg-icon"><g stroke-width="1.5" stroke-linecap="round" stroke="#fff"><circle r="7.5" cy="10" cx="10"></circle><path d="m9.99998 7.5v5"></path><path d="m7.5 9.99998h5"></path></g></svg>
+        <span class="label">Add</span>
+      </button>
     </div>
-  
-    <div class = "ok" </div>  
 
+    <div class="ok"></div>
 
+    <div class="heading">
+      <h4>Image</h4>
+      <h4>Song</h4>
+      <h4>Artist</h4>
+      <h4>YouTube Song Link</h4>
+    </div>
 
-  <div class="heading">
-    <h4>Image</h4>
-    <h4>Song</h4>
-    <h4>Artist</h4>
-    <h4>Youtube Song Link</h4>
+    <div class="display">
+      <div class="column display-image">
+        <!-- Initial song images -->
+        <p><img src="images/barney-img.jpeg" alt="Barney"></p>
+        <p><img src="images/bob-img.jpeg" alt="Bob the builder"></p>
+        <p><img src="images/ninja-img.jpeg" alt="The Ninja"></p>
+        <p><img src="images/opp-img.jpeg" alt="Oppenheimer"></p>
+      </div>
+
+      <div class="column display-song">
+        <p>I love you</p>
+        <p>Can We Fix It?</p>
+        <p>The Weekend Whip</p>
+        <p>Can You Hear The Music</p>
+      </div>
+
+      <div class="column display-artist">
+        <p>Barney</p>
+        <p>ABC Kids</p>
+        <p>Ninjago Music and The Fold</p>
+        <p>Ludwig Göransson</p>
+      </div>
+
+      <div class="column display-link">
+        <p><iframe width="300" height="100" src="https://www.youtube.com/embed/LK3C9IytrLI?start=10" allowfullscreen></iframe></p>
+        <p><iframe width="300" height="100" src="https://www.youtube.com/embed/HdVg-2jn2OU?start=6" allowfullscreen></iframe></p>
+        <p><iframe width="300" height="100" src="https://www.youtube.com/embed/Il7y6VwDrrw?start=61" allowfullscreen></iframe></p>
+        <p><iframe width="300" height="100" src="https://www.youtube.com/embed/4JZ-o3iAJv4" allowfullscreen></iframe></p>
+      </div>
+    </div>
   </div>
+</div>
 
-
-  <div class="display">
-    <div class="column display-image">
-      <!-- Initial song images -->
-      <p><img src="barneyimg.jpeg"></p>
-      <p><img src="bobimg.jpeg"></p>
-      <p><img src="ninjaimg.jpeg"></p>
-      <p><img src="oppimg.jpeg"></p>
-      
-      <!-- Include more initial songs here if needed -->
-    </div>
-    
-    <div class="column display-song">
-      <!-- Initial song names -->
-      <p>I love you</p>
-      <p>Can We Fix It?</p>
-      <p>The Weekend Whip</p>
-      <p> Can You Hear The Music</p>
-      <!-- Include more initial songs here if needed -->
-    </div>
-    
-    <div class="column display-artist">
-      <!-- Initial artists -->
-      <p>Barney</p>
-      <p>ABC kids</p>
-      <p>Ninjago Music and The Fold</p>
-      <p>Ludwig Göransson</p>
-      <!-- Include more initial songs here if needed -->
-    </div>
-    
-    <div class="column display-link">
-      <!-- Initial song links -->
-      <p>
-        <iframe width="300" height="100" src="https://www.youtube.com/embed/LK3C9IytrLI?si=jox-h7imS_AgD7kY&amp;start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </p>
-      <p>
-        <iframe width="300" height="100" src="https://www.youtube.com/embed/HdVg-2jn2OU?si=_Tpjeuv94qrb2ezn&amp;start=6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </p>
-      <p>
-        <iframe width="300" height="100" src="https://www.youtube.com/embed/Il7y6VwDrrw?si=JTHbH0iVo229ilCP&amp;start=61" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </p>
-
-      <p>
-        <iframe width="300" height="100" src="https://www.youtube.com/embed/4JZ-o3iAJv4?si=vu9dqt9YbgoLN6z9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </p>
-      <!-- Include more initial songs here if needed -->
-    </div>
-     </div>
-  </div>
-
-    </div>
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
-
 </html>

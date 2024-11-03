@@ -3,14 +3,14 @@
 body {
   height: 100%;
   width: 100%;
-  font-family: "Reem Kufi Fun" ;
+  font-family: "Reem Kufi Fun",serif ;
 }
 
 .playlist{
   width: 100%;
   height : 110vh;
   color: white;
- background: linear-gradient(90deg, rgba(154,195,219,1) 0%, rgba(9,45,121,1) 100%); 
+  background: linear-gradient(90deg, rgba(154,195,219,1) 0%, rgba(9,45,121,1) 100%);
 }
 
 
@@ -58,7 +58,7 @@ h1 {
 .display-artist p {
   font-size: 30px;
   height: 130px;
-   font-weight: bold;
+  font-weight: bold;
   justify-content: space-around;
 
 }
@@ -108,25 +108,26 @@ svg text {
 }
 @keyframes stroke {
   0%   {
-    fill: rgba(161, 161, 161, 0); 
+    fill: rgba(161, 161, 161, 0);
     stroke: rgba(17, 7, 38, 1);
-    stroke-dashoffset: 25%; 
-    stroke-dasharray: 0 50%; 
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
     stroke-width: 2;
   }
-  70%  {  161, 161, 0); 
-    stroke: rgba(17, 7, 38, 1); 
+  70%  {
+    fill: rgba(161, 161, 0);
+    stroke: rgba(17, 7, 38, 1);
   }
   80%  {
-    fill: rgba(161, 161, 161, 0); 
-    stroke: rgba(17, 7, 38, 1); 
-    stroke-width: 3; 
+    fill: rgba(161, 161, 161, 0);
+    stroke: rgba(17, 7, 38, 1);
+    stroke-width: 3;
   }
   100% {
-    fill: rgba(255, 255, 255, 1); 
+    fill: rgba(255, 255, 255, 1);
     stroke: rgba(17, 7, 38, 0);
-    stroke-dashoffset: -25%; 
-    stroke-dasharray: 50% 0; 
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
     stroke-width: 0;
   }
 }
@@ -134,7 +135,7 @@ svg text {
 
 
 .ok {
-margin-top: 10px;
+  margin-top: 10px;
 }
 
 
@@ -142,7 +143,7 @@ margin-top: 10px;
 /* ADD BUTTON */
 .add {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
   padding: 6px 12px;
   gap: 4px;
@@ -152,10 +153,10 @@ margin-top: 10px;
   background: #1b1b1cd0;
   border-radius: 20px;
   cursor: pointer;
-  transition: background 0.6s ease; 
+  transition: background 0.6s ease;
 }
 
-.lable {
+.label {
   line-height: 22px;
   font-size: 17px;
   color: #ffff;
@@ -201,8 +202,8 @@ button#uploadButton {
   padding: 0.75rem 1.5rem;
   background-color: #488aec;
   color: #ffffff;
-  font-size: 1.2 rem;
-  line-height: 1 rem;
+  font-size: 1.2rem;
+  line-height: 1rem;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -212,13 +213,13 @@ button#uploadButton {
   user-select: none;
   gap: 0.75rem;
   box-shadow: 0 4px 6px -1px #488aec31, 0 2px 4px -1px #488aec17;
-  transition: all .3s ease; 
+  transition: all .3s ease;
   cursor: pointer;
 }
 
 button#uploadButton:hover {
   box-shadow: 0 12px 20px -4px #488aec4f, 0 8px 12px -6px #488aec17; /* Adjusted shadow on hover */
-  transform: translateY(-2px); 
+  transform: translateY(-2px);
   background-color: #1b1b1cd0;
 }
 
@@ -237,7 +238,7 @@ button#uploadButton svg {
   display: flex;
   flex-wrap: wrap;
   gap: 0.875rem;
-  flex-direction: row; 
+  flex-direction: row;
 }
 
 
@@ -250,25 +251,25 @@ button#uploadButton svg {
   width: 100%;
   height: 100vh;
   display: flex;
-  flex-direction: column;  
-  align-items: center; 
-  justify-content: center; 
-  gap: 20px;  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
   color: white;
-background-color: #9ac3db;  
+  background-color: #9ac3db;
 }
 #intro i{
   cursor: pointer;
   font-size: 8rem;
-   margin-right: 5px;
-    display: flex; 
-   justify-content: center;
-    align-items: center;
-    text-align: center; 
+  margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
 }
 #intro h1{
-   margin-bottom: 20px;
+  margin-bottom: 20px;
   font-size: 70px;
 }
 
