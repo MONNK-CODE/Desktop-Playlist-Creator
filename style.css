@@ -8,7 +8,7 @@ body {
 
 .playlist{
   width: 100%;
-  height : 110vh;
+  height : 1000vh;
   color: white;
   background: linear-gradient(90deg, rgba(154,195,219,1) 0%, rgba(9,45,121,1) 100%);
 }
