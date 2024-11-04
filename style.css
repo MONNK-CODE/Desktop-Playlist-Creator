@@ -115,7 +115,7 @@ svg text {
     stroke-width: 2;
   }
   70%  {
-    fill: rgba(161, 161, 0);
+    fill: rgb(241, 241, 241);
     stroke: rgba(17, 7, 38, 1);
   }
   80%  {
